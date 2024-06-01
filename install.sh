@@ -11,7 +11,6 @@ check_install() {
         echo "Erreur: Impossible d'installer le package $package"
         exit 1
     fi
-}
 
 # Boucle pour installer chaque package
 for package in "${packages[@]}"; do
