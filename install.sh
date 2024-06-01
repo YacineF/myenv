@@ -1,5 +1,5 @@
 #!/bin/bash
-mkdir "${HOME}/Documents/tools/"
+mkdir -p "${HOME}/Documents/tools/"
 sudo apt update
 
 packages=("fzf" "fd-find" "zsh" "nala" "vim" "zsh-autosuggestions")
@@ -11,6 +11,7 @@ check_install() {
         echo "Erreur: Impossible d'installer le package $package"
         exit 1
     fi
+}
 
 # Boucle pour installer chaque package
 for package in "${packages[@]}"; do
@@ -28,5 +29,5 @@ cp .fzf_env "${HOME}/.fzf_env"
 cp .fzf-zsh "${HOME}/.fzf-zsh"
 cp .zshrc "${HOME}/.zshrc"
 cp docker-aliases.sh "${HOME}/.docker-aliases.sh"
-source .zshrc
+source "${HOME}/.zshrc"
 git clone https://github.com/Aloxaf/fzf-tab "${HOME}/Documents/tools/fzf-tab"
