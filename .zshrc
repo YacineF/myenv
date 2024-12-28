@@ -199,17 +199,15 @@ SAVEHIST=500000
 setopt appendhistory
 setopt INC_APPEND_HISTORY  
 setopt SHARE_HISTORY
-#alias dirsearch='python3 ~/Documents/tools/dirsearch/dirsearch.py'
 alias ins='sudo nala install'
-alias pipi='pip install'
-alias pipu='pip uninstall'
+
 alias fd='fdfind'
 source ~/.fzf-zsh
 source ~/Documents/tools/fzf-tab/fzf-tab.plugin.zsh 
 alias bat='batcat'
-alias tools='cd /home/yacine/Documents/tools'
-#tmux source-file ~/.tmux.conf
+alias tools='cd ${HOME}/Documents/tools'
+
 eval "$(starship init zsh)"
-# source ~/.autocomplete.sh
+
 # Docker aliases
 source ~/.docker-aliases.sh
